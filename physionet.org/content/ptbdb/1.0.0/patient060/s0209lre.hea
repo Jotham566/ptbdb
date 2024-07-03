@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>s0209lre.hea - PTB Diagnostic ECG Database</title>
+    
+    
+<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/static/font-awesome/css/all.css"/>
+<link rel="stylesheet" type="text/css" href="/static/custom/css/physionet.css"/>
+    
+<style>
+.missing-newline {
+  padding-left: 0.25em;
+  color: #f00;
+}
+</style>
+
+    
+<script src="/static/jquery/jquery.min.js"></script>
+<script src="/static/popper/popper.min.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87592301-7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-87592301-7');
+</script>
+    
+    <link rel="shortcut icon" type="image/png" href="/static/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  
+  <body class="flexbody">
+    
+<nav class="navbar navbar-expand-md navbar-dark bg-dark d-flex justify-content-between" id="mainNav">
+	<label for="navicon" class="navbar-icon">&#9776;</label>
+	<input type="checkbox" id="navicon" class="navbar-check">
+
+	<a id="nav_home" class="navbar-brand" href="/">
+		PhysioNet
+	</a>
+
+	<div class="collapse navbar-collapse" id="navbarCollapse">
+		
+
+
+
+
+<ul class="navbar-nav mr-auto">
+
+  <li class="nav-item">
+    <a id="nav_index" class="nav-link" href="/content/">
+        Find
+    </a>
+  </li>
+
+  
+    
+      <li class="nav-item">
+        <a id="nav_share" class="nav-link" href="/about/publish/" >
+          Share
+        </a>
+      </li>
+    
+  
+    
+      <li class="nav-item">
+        <a id="nav_about" class="nav-link" href="/about/" >
+          About
+        </a>
+      </li>
+    
+  
+    
+  
+    
+  
+
+  <li class="nav-item">
+    <a id="nav_news" class="nav-link" href="/news/">
+      News
+    </a>
+  </li>
+</ul>
+
+<ul class="navbar-nav ml-auto">
+  
+
+<ul class="navbar-nav ml-auto">
+  
+
+  <li class="nav-item dropdown">
+      
+          
+            <a class="nav-link dropdown-toggle" href="#" id="nav_account_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Account
+            </a>
+            <div class="dropdown-menu" aria-labelledby="nav_account_dropdown">
+                <a id="nav_login" class="dropdown-item" href="/login/">
+                  Login
+                </a>
+                <a id="nav_register" class="dropdown-item" href="/register/">
+                  Register
+                </a>
+            </div>
+          
+      
+  </li>
+</ul>
+
+	</div>
+
+	<div class="navbar-search">
+		<form class="form-inline" action="/content/">
+	    	<input name="topic" class="search-input" type="text" placeholder="Search">
+		    <span class="input-group-btn">
+		      <button id="search-button" type="submit" class="btn-search my-2 my-sm-0" title="Search PhysioNet"><span class="fa fa-search"><span class="visually-hidden">Search PhysioNet</span></span></button>
+		    </span>
+	 	</form>
+	</div>
+</nav>
+
+
+    <main>
+<div class="container-fluid">
+  
+    <h1>PTB Diagnostic ECG Database 1.0.0</h1>
+  
+  <div class="card">
+    <div class="card-header">
+      File:
+      <span class="dir-breadcrumbs"><a href="../#files-panel"
+                 class="dir-breadcrumb-up">&lt;base&gt;</a><span class="dir-breadcrumb-sep">/</span><a href="./#files-panel"
+                 class="dir-breadcrumb-up">patient060</a><span class="dir-breadcrumb-sep">/</span><span class="dir-breadcrumb-self">s0209lre.hea</span></span>
+      (2,693 bytes)
+      <ul class="float-right mb-0 list-inline">
+        
+        <li class="list-inline-item">
+          <a class="btn btn-sm btn-secondary" href="/files/ptbdb/1.0.0/patient060/s0209lre.hea"
+             title="View this file as plain text">Plain</a>
+        </li>
+        
+        <li class="list-inline-item">
+          <a class="btn btn-sm btn-secondary" href="/files/ptbdb/1.0.0/patient060/s0209lre.hea?download"
+             title="Download this file">Download</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      
+<pre class="plain"><code>s0209lre 15 1000 115200
+s0209lre.dat 16 2000 16 0 174 9412 0 i
+s0209lre.dat 16 2000 16 0 -1645 7415 0 ii
+s0209lre.dat 16 2000 16 0 -1819 18503 0 iii
+s0209lre.dat 16 2000 16 0 736 14229 0 avr
+s0209lre.dat 16 2000 16 0 996 -30338 0 avl
+s0209lre.dat 16 2000 16 0 -1732 6870 0 avf
+s0209lre.dat 16 2000 16 0 -195 6650 0 v1
+s0209lre.dat 16 2000 16 0 -374 803 0 v2
+s0209lre.dat 16 2000 16 0 -336 -28684 0 v3
+s0209lre.dat 16 2000 16 0 -596 -17043 0 v4
+s0209lre.dat 16 2000 16 0 -1240 -9386 0 v5
+s0209lre.dat 16 2000 16 0 -109 -19116 0 v6
+s0209lre.xyz 16 2000 16 0 -475 -2115 0 vx
+s0209lre.xyz 16 2000 16 0 -2075 -12483 0 vy
+s0209lre.xyz 16 2000 16 0 835 -17446 0 vz
+
+# age: 54
+# sex: male
+# ECG date: 14/08/1991
+
+# Diagnose:
+# Reason for admission: Myocardial infarction
+# Acute infarction (localization): antero-septal
+# Former infarction (localization): no
+# Additional diagnoses: Kidney stones
+# Smoker: no
+# Number of coronary vessels involved: 1
+# Infarction date (acute): 10-Aug-91
+# Previous infarction (1) date: n/a
+# Previous infarction (2) date: n/a
+
+# Hemodynamics:
+# Catheterization date: 15-Aug-91
+# Ventriculography: Akinesia/Dyskinesie apex, Hypokinesia antero-basal wall
+# Chest X-ray: normal
+# Peripheral blood Pressure (syst/diast):  140/60 mmHg
+# Pulmonary artery pressure (at rest) (syst/diast):   18/7 cmH2O
+# Pulmonary artery pressure (at rest) (mean): 12 cmH2O
+# Pulmonary capillary wedge pressure (at rest): 6 cmH2O
+# Cardiac output (at rest): 4,8 l/min
+# Cardiac index (at rest): 2,68 l/min/sqrmBSA
+# Stroke volume index (at rest):  32.0 ml/beat
+# Pulmonary artery pressure (laod) (syst/diast):   36/14 cmH2O
+# Pulmonary artery pressure (laod) (mean): 33 cmH2O
+# Pulmonary capillary wedge pressure (load): 13 cmH2O
+# Cardiac output (load): 8,5 l/min
+# Cardiac index (load): 4,75 l/min/sqrmBSA
+# Stroke volume index (load): 42 ml/beat
+# Aorta (at rest) (syst/diast): 95/63 cmH2O
+# Aorta (at rest) mean: 72 cmH2O
+# Left ventricular enddiastolic pressure: pre ventriculography 3, post ventriculography 8 cmH2O
+# Left coronary artery stenoses (RIVA): RIVA distal to ramus diagonalis_2 80%
+# Left coronary artery stenoses (RCX): No stenoses
+# Right coronary artery stenoses (RCA): No stenoses
+# Echocardiography: n/a
+
+# Therapy:
+# Infarction date: 10-Aug-91
+# Catheterization date: 15-Aug-91
+# Admission date: 10-Aug-91
+# Medication pre admission: Trifluoperazine
+# Start lysis therapy (hh.mm): 00:25
+# Lytic agent: Gamma-TPA
+# Dosage (lytic agent): 100 mg
+# Additional medication: Nitrate Heparin ASA Metoprolol
+# In hospital medication: ASA Metoprolol
+# Medication after discharge: ASA Bisoprolol Ca-antagonist</code></pre>
+
+    </div>
+    
+  </div>
+</div>
+</main>
+
+    <!-- This footer template is from the bootstrap 'blog' example -->
+
+<link rel="stylesheet" type="text/css" href="/static/custom/css/footer.css"/>
+
+<footer class="blog-footer">
+  <div class="container">
+    <div class="row row-centered">
+      <div class="col-xs-10 center col-centered">
+        <p>PhysioNet is a repository of freely-available medical research data, managed by the MIT Laboratory for Computational Physiology.</p>
+        <p>Supported by the National Institute of Biomedical Imaging and Bioengineering (NIBIB) under NIH grant number R01EB030362.</p>
+        
+          <p>For more accessibility options, see the <a href='https://accessibility.mit.edu/'>MIT Accessibility Page</a>.</p>
+        
+        <p><a href="#">Back to top</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+    
+    
+  </body>
+  
+</html>

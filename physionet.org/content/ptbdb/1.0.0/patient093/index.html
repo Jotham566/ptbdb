@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>PTB Diagnostic ECG Database v1.0.0</title>
+    
+  <!-- wfdb-python: <p>Version: 1.0.0</p> -->
+  
+    <meta name="description" content="ECGs obtained from 290 subjects using a non-commercial, prototype recorder developed at Physikalisch-Technische Bundesanstalt.">
+  
+
+    
+<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/static/font-awesome/css/all.css"/>
+<link rel="stylesheet" type="text/css" href="/static/custom/css/physionet.css"/>
+    
+  <link rel="stylesheet" type="text/css" href="/static/project/css/project-content.css"/>
+  <link rel="stylesheet" type="text/css" href="/static/highlight/css/default.min.css"/>
+
+    
+<script src="/static/jquery/jquery.min.js"></script>
+<script src="/static/popper/popper.min.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87592301-7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-87592301-7');
+</script>
+    
+  <script src="/static/mathjax/MathJax.js?config=MML_HTMLorMML"></script>
+  <script src="/static/highlight/js/highlight.min.js"></script>
+
+    <link rel="shortcut icon" type="image/png" href="/static/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  
+  <body class="flexbody">
+    
+<nav class="navbar navbar-expand-md navbar-dark bg-dark d-flex justify-content-between" id="mainNav">
+	<label for="navicon" class="navbar-icon">&#9776;</label>
+	<input type="checkbox" id="navicon" class="navbar-check">
+
+	<a id="nav_home" class="navbar-brand" href="/">
+		PhysioNet
+	</a>
+
+	<div class="collapse navbar-collapse" id="navbarCollapse">
+		
+
+
+
+
+<ul class="navbar-nav mr-auto">
+
+  <li class="nav-item">
+    <a id="nav_index" class="nav-link" href="/content/">
+        Find
+    </a>
+  </li>
+
+  
+    
+      <li class="nav-item">
+        <a id="nav_share" class="nav-link" href="/about/publish/" >
+          Share
+        </a>
+      </li>
+    
+  
+    
+      <li class="nav-item">
+        <a id="nav_about" class="nav-link" href="/about/" >
+          About
+        </a>
+      </li>
+    
+  
+    
+  
+    
+  
+
+  <li class="nav-item">
+    <a id="nav_news" class="nav-link" href="/news/">
+      News
+    </a>
+  </li>
+</ul>
+
+<ul class="navbar-nav ml-auto">
+  
+
+<ul class="navbar-nav ml-auto">
+  
+
+  <li class="nav-item dropdown">
+      
+          
+            <a class="nav-link dropdown-toggle" href="#" id="nav_account_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Account
+            </a>
+            <div class="dropdown-menu" aria-labelledby="nav_account_dropdown">
+                <a id="nav_login" class="dropdown-item" href="/login/">
+                  Login
+                </a>
+                <a id="nav_register" class="dropdown-item" href="/register/">
+                  Register
+                </a>
+            </div>
+          
+      
+  </li>
+</ul>
+
+	</div>
+
+	<div class="navbar-search">
+		<form class="form-inline" action="/content/">
+	    	<input name="topic" class="search-input" type="text" placeholder="Search">
+		    <span class="input-group-btn">
+		      <button id="search-button" type="submit" class="btn-search my-2 my-sm-0" title="Search PhysioNet"><span class="fa fa-search"><span class="visually-hidden">Search PhysioNet</span></span></button>
+		    </span>
+	 	</form>
+	</div>
+</nav>
+
+
+    <main>
+  <div class="container">
+    
+
+    <p>
+      <span class="badge badge-dark"><i class="fa fa-database"></i> Database</span>
+      <span class="badge badge-success"><i class="fas fa-lock-open"></i> Open Access</span>
+    </p>
+    <h1 class="form-signin-heading">PTB Diagnostic ECG Database</h1>
+    <p>
+      <strong>
+      
+        <a class="author">Ralf-Dieter Bousseljot</a> <i class="fas fa-info-circle" data-toggle="popover" data-original-title="<strong>Author Info</strong>" data-placement="bottom" data-content="&lt;b&gt;Affiliations&lt;/b&gt;&lt;p&gt;Physikalisch-Technische Bundesanstalt, Berlin, Germany&lt;/p&gt;<p><b>Profile</b><br><a href=/users/boussi target=_blank>boussi</a></p>" data-html="true" style="cursor: pointer;"></i>
+        
+      
+      </strong>
+    </p>
+
+    <p>Published: Sept. 25, 2004. Version:
+      1.0.0
+    </p>
+
+    
+    <hr>
+
+    <!-- Latest news and announcements -->
+    
+      <div class="alert alert-primary" role="alert">
+        
+        
+          <p>
+            <strong>PTB Diagnostic ECG Database</strong>
+            <em>(Sept. 25, 2004, midnight)</em>
+            <p>New in PhysioBank is the <a href="https://doi.org/10.13026/C28C71">PTB Diagnostic ECG Database</a>, a collection of 549 high-resolution 15-lead ECGs (12 standard leads together with Frank XYZ leads), including clinical summaries for each record. From one to five ECG records are available for each of the 294 subjects, who include healthy subjects as well as patients with a variety of heart diseases.</p>
+            
+          </p>
+          
+          
+      </div>
+    
+
+    <div class="row">
+      <!-- Main column -->
+      <div class="col-md-8">
+        
+          <div class="alert alert-secondary">
+
+  
+    
+
+    
+      <strong>When using this resource, please cite the original publication:</strong>
+      
+        <p><a href="https://www.deepdyve.com/lp/de-gruyter/nutzung-der-ekg-signaldatenbank-cardiodat-der-ptb-ber-das-internet-uemKpjIFzM">Bousseljot R, Kreiseler D, Schnabel, A. Nutzung der EKG-Signaldatenbank CARDIODAT der PTB über das Internet. Biomedizinische Technik, Band 40, Ergänzungsband 1 (1995) S 317</a></p>
+      
+    
+  
+    
+      <p>
+        <strong>Please include the standard citation for PhysioNet:</strong>
+        <a href="#citationModalPlatform" data-toggle="modal">(show more options)</a>
+          <br><span>Goldberger, A., Amaral, L., Glass, L., Hausdorff, J., Ivanov, P. C., Mark, R., ... &amp; Stanley, H. E. (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. Circulation [Online]. 101 (23), pp. e215–e220.</span>
+      </p>
+    
+
+  <div class="modal fade" id="citationModalPlatform">
+  <div class="modal-dialog citation" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+  <table><tbody>
+    
+        
+          <tr>
+            <th>APA</th>
+            <td>Goldberger, A., Amaral, L., Glass, L., Hausdorff, J., Ivanov, P. C., Mark, R., ... &amp; Stanley, H. E. (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. Circulation [Online]. 101 (23), pp. e215–e220.</td>
+          </tr>
+        
+    
+        
+          <tr>
+            <th>MLA</th>
+            <td>Goldberger, A., et al. &quot;PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. Circulation [Online]. 101 (23), pp. e215–e220.&quot; (2000).</td>
+          </tr>
+        
+    
+        
+          <tr>
+            <th>CHICAGO</th>
+            <td>Goldberger, A., L. Amaral, L. Glass, J. Hausdorff, P. C. Ivanov, R. Mark, J. E. Mietus, G. B. Moody, C. K. Peng, and H. E. Stanley. &quot;PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. Circulation [Online]. 101 (23), pp. e215–e220.&quot; (2000).</td>
+          </tr>
+        
+    
+        
+          <tr>
+            <th>HARVARD</th>
+            <td>Goldberger, A., Amaral, L., Glass, L., Hausdorff, J., Ivanov, P.C., Mark, R., Mietus, J.E., Moody, G.B., Peng, C.K. and Stanley, H.E., 2000. PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. Circulation [Online]. 101 (23), pp. e215–e220.</td>
+          </tr>
+        
+    
+        
+          <tr>
+            <th>VANCOUVER</th>
+            <td>Goldberger A, Amaral L, Glass L, Hausdorff J, Ivanov PC, Mark R, Mietus JE, Moody GB, Peng CK, Stanley HE. PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. Circulation [Online]. 101 (23), pp. e215–e220.</td>
+          </tr>
+        
+    
+  </tbody></table>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+        
+
+        
+          <h3>Data Description</h3>
+
+<p>The ECGs in this collection were obtained using a non-commercial, PTB prototype recorder with the following specifications:</p>
+
+<ul>
+	<li>16 input channels, (14 for ECGs, 1 for respiration, 1 for line voltage)</li>
+	<li>Input voltage: &plusmn;16 mV, compensated offset voltage up to &plusmn; 300 mV</li>
+	<li>Input resistance: 100 &Omega; (DC)</li>
+	<li>Resolution: 16 bit with 0.5 &mu;V/LSB (2000 A/D units per mV)</li>
+	<li>Bandwidth: 0 - 1 kHz (synchronous sampling of all channels)</li>
+	<li>Noise voltage: max. 10 &mu;V (pp), respectively 3 &mu;V (RMS) with input short circuit</li>
+	<li>Online recording of skin resistance</li>
+	<li>Noise level recording during signal collection</li>
+</ul>
+
+<p>The database contains 549 records from 290 subjects (aged 17 to 87, mean 57.2; 209 men, mean age 55.5, and 81 women, mean age 61.6; ages were not recorded for 1 female and 14 male subjects). Each subject is represented by one to five records. There are no subjects numbered 124, 132, 134, or 161. Each record includes 15 simultaneously measured signals: the conventional 12 leads (i, ii, iii, avr, avl, avf, v1, v2, v3, v4, v5, v6) together with the 3 Frank lead ECGs (vx, vy, vz). Each signal is digitized at 1000 samples per second, with 16 bit resolution over a range of &plusmn; 16.384 mV. On special request to the contributors of the database, recordings may be available at sampling rates up to 10 KHz.</p>
+
+<p>Within the header (.hea) file of most of these ECG records is a detailed clinical summary, including age, gender, diagnosis, and where applicable, data on medical history, medication and interventions, coronary artery pathology, ventriculography, echocardiography, and hemodynamics. The clinical summary is not available for 22 subjects. The diagnostic classes of the remaining 268 subjects are summarized below:</p>
+
+<table style="margin:1em auto">
+	<tbody>
+		<tr>
+			<th>Diagnostic class</th>
+			<th>Number of subjects</th>
+		</tr>
+		<tr>
+			<td>Myocardial infarction</td>
+			<td>148</td>
+		</tr>
+		<tr>
+			<td>Cardiomyopathy/Heart failure</td>
+			<td>18</td>
+		</tr>
+		<tr>
+			<td>Bundle branch block</td>
+			<td>15</td>
+		</tr>
+		<tr>
+			<td>Dysrhythmia</td>
+			<td>14</td>
+		</tr>
+		<tr>
+			<td>Myocardial hypertrophy</td>
+			<td>7</td>
+		</tr>
+		<tr>
+			<td>Valvular heart disease</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>Myocarditis</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>Miscellaneous</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>Healthy controls</td>
+			<td>52</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>Contributors</h3>
+
+<p><a href="http://www.ptb.de" target="other">Physikalisch-Technische Bundesanstalt (PTB)</a>, the National Metrology Institute of Germany, has provided this compilation of digitized ECGs for research, algorithmic benchmarking or teaching purposes to the users of PhysioNet. The ECGs were collected from healthy volunteers and patients with different heart diseases by Professor Michael Oeff, M.D., at the Department of Cardiology of University Clinic Benjamin Franklin in Berlin, Germany. His current address is:</p>
+
+<p>Department of Cardiology<br />
+Klinikum Brandenburg<br />
+14770 Brandenburg, Germany</p>
+
+<p>The database was prepared for PhysioNet by:</p>
+
+<p style="margin-left:4em">Hans Koch, Prof., Ph.D (email: Hans.Koch@ptb.de)<br />
+Ralf Bousseljot, Dr. Ing.<br />
+Dieter Kreiseler, Dr. Ing.<br />
+Physikalisch-Technische Bundesanstalt, Abbestrasse 2-12, 10587 Berlin, Germany</p>
+
+<p>and by</p>
+
+<p style="margin-left:4em">Lothar Schmitz, M.D.<br />
+Charit&eacute; Medical Center, Campus Virchow-Klinikum<br />
+and German Heart Institute, Augustenburger Platz 1, 13353 Berlin, Germany</p>
+
+<h3>References</h3>
+
+<p>Bousseljot, R.; Kreiseler, D.; Schnabel, A. Nutzung der EKG-Signaldatenbank CARDIODAT der PTB &uuml;ber das Internet. <em>Biomedizinische Technik</em>, Band 40, Erg&auml;nzungsband 1 (1995) S 317</p>
+
+<p>Kreiseler, D.; Bousseljot, R. Automatisierte EKG-Auswertung mit Hilfe der EKG-Signaldatenbank CARDIODAT der PTB. <em>Biomedizinische Technik</em>, Band 40, Erg&auml;nzungsband 1 (1995) S 319</p>
+<!-- end reference -->
+
+<p><strong>Comments on the experience with this dataset from the users of this service would be highly appreciated; in particular, a preprint of any publication relying on some of these ECGs would be very welcome.</strong></p>
+        <hr>
+        
+      </div>
+      <!-- /.main column -->
+
+      <!-- Sidebar Column -->
+      <div class="col-md-4">
+        
+        
+
+        
+
+        <div class="card my-4">
+          <h5 class="card-header">Share</h5>
+          <div class="card-body">
+            <a class="btn btn-sm share-email sharebtn"
+              href="mailto:?subject=PTB%20Diagnostic%20ECG%20Database&body=https://physionet.org/content/ptbdb/1.0.0/patient093/"
+              role="button" title="Share with email"><i class="far fa-envelope"></i></a>
+            <a class="btn btn-sm facebook sharebtn"
+              href="http://www.facebook.com/sharer.php?u=https://physionet.org/content/ptbdb/1.0.0/patient093/" role="button"
+              title="Share on Facebook"><i class="fab fa-facebook"></i></a>
+            <a class="btn btn-sm linkedin sharebtn"
+              href="https://www.linkedin.com/shareArticle?url=https://physionet.org/content/ptbdb/1.0.0/patient093/"
+              role="button" title="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a class="btn btn-sm reddit sharebtn"
+              href="https://www.reddit.com/submit?url=https://physionet.org/content/ptbdb/1.0.0/patient093/&title=PTB%20Diagnostic%20ECG%20Database"
+              role="button" title="Share on Reddit"><i class="fab fa-reddit"></i></a>
+            <a class="btn btn-sm twitter sharebtn"
+              href="https://twitter.com/intent/tweet?text=PTB%20Diagnostic%20ECG%20Database. https://physionet.org/content/ptbdb/1.0.0/patient093/"
+              role="button" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="card my-4">
+          <h5 class="card-header">Access</h5>
+          <div class="card-body">
+            <p>
+              <strong>Access Policy:</strong>
+              <br>
+              Anyone can access the files, as long as they conform to the terms of the specified license.
+            </p>
+            <p>
+              <strong>License (for files):</strong>
+              <br>
+              <a href="/content/ptbdb/view-license/1.0.0/">Open Data Commons Attribution License v1.0</a>
+            </p>
+            
+
+            
+          </div>
+        </div>
+        <div class="card my-4">
+          <h5 class="card-header">Discovery</h5>
+          <div class="card-body">
+            
+              <p><strong>DOI (version 1.0.0):</strong>
+                <br>
+                <a href="https://doi.org/10.13026/C28C71">https://doi.org/10.13026/C28C71</a>
+              </p>
+            
+
+            
+
+            
+
+            
+              <p><strong>Topics:</strong>
+                <br>
+                
+                  <a href="/content/?topic=ecg"><span class="badge badge-pn">ecg</span></a>
+                
+              </p>
+            
+
+            
+          </div>
+        </div>
+
+        <div class="card my-4">
+          <h5 class="card-header">Corresponding Author</h5>
+          <div class="card-body">
+            
+              <em>You must be logged in to view the contact information.</em>
+            
+          </div>
+        </div>
+        
+
+      </div>
+      <!-- /.sidebar -->
+    </div>
+    <h2 id="files">Files</h2>
+    
+      
+        
+        
+        <p>Total uncompressed size: 1.7 GB.</p>
+        
+        <h5>Access the files</h5>
+        
+
+        <ul>
+          
+            
+              
+                <li><a href="/static/published-projects/ptbdb/ptb-diagnostic-ecg-database-1.0.0.zip">Download the ZIP file</a>
+                  (1.7 GB)
+                </li>
+              
+              
+                <li>Access the files using the Google Cloud Storage Browser <a
+                  href="https://console.cloud.google.com/storage/browser/ptbdb-1.0.0.physionet.org/">here</a>.
+                  Login with a Google account is required.
+                <li>
+                  Access the data using the Google Cloud command line tools (please refer to the <a
+                    href="https://cloud.google.com/storage/docs/gsutil_install">gsutil</a>
+                  documentation for guidance):
+                  <pre class="shell-command">gsutil -m -u YOUR_PROJECT_ID cp -r gs://ptbdb-1.0.0.physionet.org DESTINATION</pre>
+                </li>
+              
+            
+          
+           
+
+          
+            <li>
+              Download the files using your terminal:
+              <pre class="shell-command">wget -r -N -c -np https://physionet.org/files/ptbdb/1.0.0/</pre>
+            </li>
+          
+          
+            <li>
+              Download the files using AWS command line tools:
+              <pre class="shell-command">aws s3 sync s3://physionet-open/ptbdb/1.0.0/ DESTINATION</pre>
+            </li>
+            
+
+        </ul>
+        
+
+        
+          
+            <p><a href="/lightwave/?db=ptbdb/1.0.0"><i
+              class="fas fa-chart-line"></i> Visualize waveforms</a></p>
+          
+        
+
+        <div id="files-panel" class="card">
+          
+<div class="card-header"
+     data-dfp-panel-url="/content/ptbdb/files-panel/1.0.0/"
+     data-dfp-cur-dir="patient093">
+  Folder Navigation:
+  <span class="dir-breadcrumbs"><a href="../#files-panel"
+             data-dfp-dir=""
+             class="dir-breadcrumb-up">&lt;base&gt;</a><span class="dir-breadcrumb-sep">/</span><span class="dir-breadcrumb-self">patient093</span></span>
+</div>
+
+  
+<table class="files-panel">
+  <col class="files-panel-name"></col>
+  <col class="files-panel-size"></col>
+  <col class="files-panel-date"></col>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Modified</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr class="parentdir">
+      <td><a href="../#files-panel" data-dfp-dir="">Parent Directory</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+  
+  
+  
+    <tr>
+      <td><a href="s0367lre.dat">s0367lre.dat</a>
+        <a class="download" href="/files/ptbdb/1.0.0/patient093/s0367lre.dat?download"
+           title="Download s0367lre.dat">
+          <span class="visually-hidden">(download)</span>
+        </a>
+      </td>
+      <td>2.6 MB</td>
+      <td>2004-08-03</td>
+    </tr>
+  
+    <tr>
+      <td><a href="s0367lre.hea">s0367lre.hea</a>
+        <a class="download" href="/files/ptbdb/1.0.0/patient093/s0367lre.hea?download"
+           title="Download s0367lre.hea">
+          <span class="visually-hidden">(download)</span>
+        </a>
+      </td>
+      <td>2.5 KB</td>
+      <td>2016-03-22</td>
+    </tr>
+  
+    <tr>
+      <td><a href="s0367lre.xyz">s0367lre.xyz</a>
+        <a class="download" href="/files/ptbdb/1.0.0/patient093/s0367lre.xyz?download"
+           title="Download s0367lre.xyz">
+          <span class="visually-hidden">(download)</span>
+        </a>
+      </td>
+      <td>675 KB</td>
+      <td>2004-08-03</td>
+    </tr>
+  
+    <tr>
+      <td><a href="s0371lre.dat">s0371lre.dat</a>
+        <a class="download" href="/files/ptbdb/1.0.0/patient093/s0371lre.dat?download"
+           title="Download s0371lre.dat">
+          <span class="visually-hidden">(download)</span>
+        </a>
+      </td>
+      <td>2.6 MB</td>
+      <td>2004-08-03</td>
+    </tr>
+  
+    <tr>
+      <td><a href="s0371lre.hea">s0371lre.hea</a>
+        <a class="download" href="/files/ptbdb/1.0.0/patient093/s0371lre.hea?download"
+           title="Download s0371lre.hea">
+          <span class="visually-hidden">(download)</span>
+        </a>
+      </td>
+      <td>2.5 KB</td>
+      <td>2016-03-22</td>
+    </tr>
+  
+    <tr>
+      <td><a href="s0371lre.xyz">s0371lre.xyz</a>
+        <a class="download" href="/files/ptbdb/1.0.0/patient093/s0371lre.xyz?download"
+           title="Download s0371lre.xyz">
+          <span class="visually-hidden">(download)</span>
+        </a>
+      </td>
+      <td>675 KB</td>
+      <td>2004-08-03</td>
+    </tr>
+  
+    <tr>
+      <td><a href="s0375lre.dat">s0375lre.dat</a>
+        <a class="download" href="/files/ptbdb/1.0.0/patient093/s0375lre.dat?download"
+           title="Download s0375lre.dat">
+          <span class="visually-hidden">(download)</span>
+        </a>
+      </td>
+      <td>2.6 MB</td>
+      <td>2004-08-03</td>
+    </tr>
+  
+    <tr>
+      <td><a href="s0375lre.hea">s0375lre.hea</a>
+        <a class="download" href="/files/ptbdb/1.0.0/patient093/s0375lre.hea?download"
+           title="Download s0375lre.hea">
+          <span class="visually-hidden">(download)</span>
+        </a>
+      </td>
+      <td>2.5 KB</td>
+      <td>2016-03-22</td>
+    </tr>
+  
+    <tr>
+      <td><a href="s0375lre.xyz">s0375lre.xyz</a>
+        <a class="download" href="/files/ptbdb/1.0.0/patient093/s0375lre.xyz?download"
+           title="Download s0375lre.xyz">
+          <span class="visually-hidden">(download)</span>
+        </a>
+      </td>
+      <td>675 KB</td>
+      <td>2004-08-03</td>
+    </tr>
+  
+    <tr>
+      <td><a href="s0378lre.dat">s0378lre.dat</a>
+        <a class="download" href="/files/ptbdb/1.0.0/patient093/s0378lre.dat?download"
+           title="Download s0378lre.dat">
+          <span class="visually-hidden">(download)</span>
+        </a>
+      </td>
+      <td>2.6 MB</td>
+      <td>2004-08-03</td>
+    </tr>
+  
+    <tr>
+      <td><a href="s0378lre.hea">s0378lre.hea</a>
+        <a class="download" href="/files/ptbdb/1.0.0/patient093/s0378lre.hea?download"
+           title="Download s0378lre.hea">
+          <span class="visually-hidden">(download)</span>
+        </a>
+      </td>
+      <td>2.5 KB</td>
+      <td>2016-03-22</td>
+    </tr>
+  
+    <tr>
+      <td><a href="s0378lre.xyz">s0378lre.xyz</a>
+        <a class="download" href="/files/ptbdb/1.0.0/patient093/s0378lre.xyz?download"
+           title="Download s0378lre.xyz">
+          <span class="visually-hidden">(download)</span>
+        </a>
+      </td>
+      <td>675 KB</td>
+      <td>2004-08-03</td>
+    </tr>
+  
+    <tr>
+      <td><a href="s0396lre.dat">s0396lre.dat</a>
+        <a class="download" href="/files/ptbdb/1.0.0/patient093/s0396lre.dat?download"
+           title="Download s0396lre.dat">
+          <span class="visually-hidden">(download)</span>
+        </a>
+      </td>
+      <td>2.6 MB</td>
+      <td>2004-08-03</td>
+    </tr>
+  
+    <tr>
+      <td><a href="s0396lre.hea">s0396lre.hea</a>
+        <a class="download" href="/files/ptbdb/1.0.0/patient093/s0396lre.hea?download"
+           title="Download s0396lre.hea">
+          <span class="visually-hidden">(download)</span>
+        </a>
+      </td>
+      <td>2.5 KB</td>
+      <td>2016-03-22</td>
+    </tr>
+  
+    <tr>
+      <td><a href="s0396lre.xyz">s0396lre.xyz</a>
+        <a class="download" href="/files/ptbdb/1.0.0/patient093/s0396lre.xyz?download"
+           title="Download s0396lre.xyz">
+          <span class="visually-hidden">(download)</span>
+        </a>
+      </td>
+      <td>675 KB</td>
+      <td>2004-08-03</td>
+    </tr>
+  
+  </tbody>
+</table>
+
+
+        </div>
+      
+
+      
+    
+    <br>
+    
+</div>
+
+
+
+</main>
+
+    <!-- This footer template is from the bootstrap 'blog' example -->
+
+<link rel="stylesheet" type="text/css" href="/static/custom/css/footer.css"/>
+
+<footer class="blog-footer">
+  <div class="container">
+    <div class="row row-centered">
+      <div class="col-xs-10 center col-centered">
+        <p>PhysioNet is a repository of freely-available medical research data, managed by the MIT Laboratory for Computational Physiology.</p>
+        <p>Supported by the National Institute of Biomedical Imaging and Bioengineering (NIBIB) under NIH grant number R01EB030362.</p>
+        
+          <p>For more accessibility options, see the <a href='https://accessibility.mit.edu/'>MIT Accessibility Page</a>.</p>
+        
+        <p><a href="#">Back to top</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+
+    
+  <script src="/static/project/js/dynamic-files-panel.js"></script>
+  <script src="/static/custom/js/enable-popover.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+    
+  <!-- https://schema.org/ metadata for discovery -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "PTB Diagnostic ECG Database",
+  "description": "Physikalisch\u002DTechnische Bundesanstalt (PTB), the National Metrology Institute of Germany, has provided this compilation of digitized ECGs for research, algorithmic benchmarking or teaching purposes to the users of PhysioNet. The ECGs were collected from healthy volunteers and patients with different heart diseases by Professor Michael Oeff, M.D.",
+  "version": "1.0.0",
+  "license": "https://opendatacommons.org/licenses/by/index.html",
+  "datePublished" : "Sept. 25, 2004",
+  "url": "https://physionet.org/content/ptbdb/1.0.0/",
+  
+  "identifier": "https://doi.org/10.13026/C28C71",
+  
+  "creator": [
+  
+    {
+      "@type": "Person",
+      "givenName": "Ralf\u002DDieter",
+      "familyName": "Bousseljot",
+      "name": "Ralf\u002DDieter Bousseljot"
+    }
+  
+    ],
+  "includedInDataCatalog":{
+     "@type": "DataCatalog",
+     "name": "physionet.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://physionet.org/content/ptbdb/1.0.0/#files"
+    }
+  ]
+}
+</script>
+
+  </body>
+  
+</html>
